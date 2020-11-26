@@ -1,0 +1,524 @@
+fileFormatVersion: 2
+guid: 0045e403ba05bc948abcdb16ea7d2dfe
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 2688777540063915087
+    second: Le petit chaperon_Page_01_Multiple_0
+  - first:
+      213: 3146585342469127019
+    second: Le petit chaperon_Page_01_Multiple_1
+  - first:
+      213: 3108704897612728639
+    second: Le petit chaperon_Page_01_Multiple_2
+  - first:
+      213: -2452706327451402511
+    second: Le petit chaperon_Page_01_Multiple_3
+  - first:
+      213: 7122386235807722196
+    second: Le petit chaperon_Page_01_Multiple_4
+  - first:
+      213: 2773029681944108257
+    second: Le petit chaperon_Page_01_Multiple_5
+  - first:
+      213: -7459680235790692226
+    second: Le petit chaperon_Page_01_Multiple_6
+  - first:
+      213: 4200066346881456194
+    second: Le petit chaperon_Page_01_Multiple_7
+  - first:
+      213: -4381908760348007866
+    second: Le petit chaperon_Page_01_Multiple_8
+  - first:
+      213: -5349194882063641019
+    second: Le petit chaperon_Page_01_Multiple_9
+  - first:
+      213: 1612820339865005852
+    second: Le petit chaperon_Page_01_Multiple_10
+  - first:
+      213: -8343525825658567136
+    second: Le petit chaperon_Page_01_Multiple_11
+  - first:
+      213: -5878078825031452029
+    second: Le petit chaperon_Page_01_Multiple_12
+  - first:
+      213: -990221386264910264
+    second: Le petit chaperon_Page_01_Multiple_13
+  - first:
+      213: -6423388190392489632
+    second: Le petit chaperon_Page_01_Multiple_14
+  - first:
+      213: 6226410647227649095
+    second: Le petit chaperon_Page_01_Multiple_15
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: -1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Le petit chaperon_Page_01_Multiple_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 788.25
+        width: 353.25
+        height: 262.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f4cee8b4de4705520800000000000000
+      internalID: 2688777540063915087
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Le petit chaperon_Page_01_Multiple_1
+      rect:
+        serializedVersion: 2
+        x: 353
+        y: 788.25
+        width: 353.25
+        height: 262.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b6bb25992baeaab20800000000000000
+      internalID: 3146585342469127019
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Le petit chaperon_Page_01_Multiple_2
+      rect:
+        serializedVersion: 2
+        x: 706
+        y: 788.25
+        width: 353.25
+        height: 262.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f3949bd32a6542b20800000000000000
+      internalID: 3108704897612728639
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Le petit chaperon_Page_01_Multiple_3
+      rect:
+        serializedVersion: 2
+        x: 1059
+        y: 788.25
+        width: 353.25
+        height: 262.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1fef7e5179c36fdd0800000000000000
+      internalID: -2452706327451402511
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Le petit chaperon_Page_01_Multiple_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 526.25
+        width: 353.25
+        height: 262.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4da6372ab8cc7d260800000000000000
+      internalID: 7122386235807722196
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Le petit chaperon_Page_01_Multiple_5
+      rect:
+        serializedVersion: 2
+        x: 353
+        y: 526.25
+        width: 353.25
+        height: 262.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ec94e7bdc7cb7620800000000000000
+      internalID: 2773029681944108257
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Le petit chaperon_Page_01_Multiple_6
+      rect:
+        serializedVersion: 2
+        x: 706
+        y: 526.25
+        width: 353.25
+        height: 262.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e7091bf3954e97890800000000000000
+      internalID: -7459680235790692226
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Le petit chaperon_Page_01_Multiple_7
+      rect:
+        serializedVersion: 2
+        x: 1059
+        y: 526.25
+        width: 353.25
+        height: 262.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 24811fee612a94a30800000000000000
+      internalID: 4200066346881456194
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Le petit chaperon_Page_01_Multiple_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 264.25
+        width: 353.25
+        height: 262.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 642e845e2355033c0800000000000000
+      internalID: -4381908760348007866
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Le petit chaperon_Page_01_Multiple_9
+      rect:
+        serializedVersion: 2
+        x: 353
+        y: 264.25
+        width: 353.25
+        height: 262.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 54652449897d3c5b0800000000000000
+      internalID: -5349194882063641019
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Le petit chaperon_Page_01_Multiple_10
+      rect:
+        serializedVersion: 2
+        x: 706
+        y: 264.25
+        width: 353.25
+        height: 262.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c1fad24dd83e16610800000000000000
+      internalID: 1612820339865005852
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Le petit chaperon_Page_01_Multiple_11
+      rect:
+        serializedVersion: 2
+        x: 1059
+        y: 264.25
+        width: 353.25
+        height: 262.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 026c25ba777d53c80800000000000000
+      internalID: -8343525825658567136
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Le petit chaperon_Page_01_Multiple_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2.25
+        width: 353.25
+        height: 262.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 38a3148b37edc6ea0800000000000000
+      internalID: -5878078825031452029
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Le petit chaperon_Page_01_Multiple_13
+      rect:
+        serializedVersion: 2
+        x: 353
+        y: 2.25
+        width: 353.25
+        height: 262.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8466fa645e60242f0800000000000000
+      internalID: -990221386264910264
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Le petit chaperon_Page_01_Multiple_14
+      rect:
+        serializedVersion: 2
+        x: 706
+        y: 2.25
+        width: 353.25
+        height: 262.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0696731397a8bd6a0800000000000000
+      internalID: -6423388190392489632
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Le petit chaperon_Page_01_Multiple_15
+      rect:
+        serializedVersion: 2
+        x: 1059
+        y: 2.25
+        width: 353.25
+        height: 262.75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 74cc6b5ae77a86650800000000000000
+      internalID: 6226410647227649095
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: c85d1a3491ea613478db88333a7540e9
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
