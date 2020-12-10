@@ -167,6 +167,7 @@ public class Fonctions_Utiles : MonoBehaviour {
 
     public void LivreBouton(GameObject newContenu)
     {
+        GameObject.Find("Main Camera").GetComponent<LivreManagement>().panelPause.GetComponent<RectTransform>().localScale = new Vector2(0, 0);
         if (!GameObject.Find("Main Camera").GetComponent<LivreManagement>().dataCharged || GameObject.Find("Main Camera").GetComponent<LivreManagement>().currentPage == GameObject.Find("Main Camera").GetComponent<LivreManagement>().nbPagesLivre-1)
         {
             Debug.Log(GameObject.Find("Main Camera").GetComponent<LivreManagement>().currentPage);
