@@ -218,11 +218,11 @@ public class LivreManagement : MonoBehaviour
                 //pageLivreArray[ii].transform.Find("TextPage").GetComponent<Text>().text = this.GetComponent<LangageScript>().textesPagesLivres[ii];
 
                 //Affectation de la fonctionalité pause au texte
-                pageLivreArray[ii].transform.Find("TextPage").GetComponent<Button>().onClick.AddListener(delegate { PanelPauseSonPause(); });
+                //pageLivreArray[ii].transform.Find("TextPage").GetComponent<Button>().onClick.AddListener(delegate { PanelPauseSonPause(); });
+                pageLivreArray[ii].transform.Find("TextPage").GetComponent<Button>().onClick.AddListener(delegate { CachePanelPause();});
 
-
-                //Ambiance musique 
-                pageLivreArray[ii].GetComponent<PageLivreScript>().ambiancePage = ambianceLivre[ii];
+            //Ambiance musique 
+            pageLivreArray[ii].GetComponent<PageLivreScript>().ambiancePage = ambianceLivre[ii];
 
                 //Image de la page
                 pageLivreArray[ii].transform.Find("ImagePageLiseret").Find("ImagePage").GetComponent<Image>().sprite = imagePage[ii];
@@ -362,7 +362,6 @@ public class LivreManagement : MonoBehaviour
             {
                 chrono = 0;
             }
-            Debug.Log(chrono);
             if(panelPause.GetComponent<RectTransform>().localScale.x == 0 || chrono >= 3 )
             {
                 break;
@@ -455,13 +454,15 @@ public class LivreManagement : MonoBehaviour
         deltaTime = Time.smoothDeltaTime;
 
         //ControleAnimationPageTourne();
-        SonAmbianceInteractability();
-        SonIndependantInteractability();
+        //SonAmbianceInteractability();
+        //SonIndependantInteractability();
         EvolutionVariablesSaveSystem();
         BoutonsPanelPauseInteractability();
 
         //Sécurité panel pause interactability
         PanelPauseSecurity();
+
+
     }
 
 
@@ -677,16 +678,16 @@ public class LivreManagement : MonoBehaviour
         if (!isSonPause)
         {
             isSonPause = true;
-            ambianceGenarale_AudioSource.Pause();
-            ambianceGeneraleAudioTemp.Pause();
+            //ambianceGenarale_AudioSource.Pause();       
+            //ambianceGeneraleAudioTemp.Pause();
             sonsIndependants_AudioSource.Pause();
             buttonSonPause.gameObject.GetComponent<Image>().sprite = spriteSonPlay;
         }
         else if (isSonPause)
         {
             isSonPause = false;
-            ambianceGenarale_AudioSource.UnPause();
-            ambianceGeneraleAudioTemp.UnPause();
+            //ambianceGenarale_AudioSource.UnPause();
+            //ambianceGeneraleAudioTemp.UnPause();
             sonsIndependants_AudioSource.UnPause();
             buttonSonPause.gameObject.GetComponent<Image>().sprite = spriteSonPause;
         }
@@ -813,6 +814,16 @@ public class LivreManagement : MonoBehaviour
             File.SetAttributes(path, FileAttributes.Normal);
             File.Delete(path);
         }
+    }
+
+    //Bruit Son independant slider
+    public AudioClip sonIndepBipVolume;
+    public AudioSource sliderSonIndepAudio;         //Posée sur Background du sliderSonInder
+    public void BipSliderSonIndep()
+    {
+        //Slider Son volume bip
+        sliderSonIndepAudio.volume = sonsIndependants_AudioSource.volume;
+        sliderSonIndepAudio.PlayOneShot(sonIndepBipVolume);
     }
 
 
