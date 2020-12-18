@@ -110,12 +110,12 @@ public class LangageScript : MonoBehaviour
         // Textes du Livre (A remplir pour chaque livre en fonction du nombre de pages)
         textesPagesLivres[0] = "Il était une fois une petite fille que tout le monde appréciait. Sa grand-mère lui faisait plein de cadeaux. Un jour elle lui offrit un joli bonnet tout rouge tricoté avec amour. La petite fille l’adorait, qu’il pleuve ou qu’il vente elle ne le quittait jamais. Alors tout le monde l’appela Le Petit Chaperon Rouge.";
         textesPagesLivres[1] = "Un matin, sa maman lui demande :\n" +
-            "– Grand-mère est malade, elle doit garder le lit, peux-tu lui apporter ce panier, j’y ai mis les galettes qu’elle préfère et une bouteille de vin.\n" +
+            "– Grand-mère est malade, elle doit garder le lit, peux-tu lui apporter ce panier, j’y ai mis les galettes qu’elle préfère et une bouteille de vin <color=red> (1) </color>.\n" +
             "– J’y vais tout de suite, maman.\n" +
             "– Et surtout, Petit Chaperon Rouge ne t’écarte pas de la route.\n" +
             "– Bien sûr, salut Maman !\n" +
-            "Mais à peine la porte fermée, la fillette aperçoit, bondissant près du grand arbre, un lièvre au pelage tout blanc, aux yeux tout rouges... <color=red> (1) </color>";
-        textesPagesLivres[2] = "...et aux grandes dents ! Il allait vers la forêt, tout excité en parlant très fort d’un grand magicien aux talents extraordinaires.";
+            "Mais à peine la porte fermée <color=red> (2) </color>, la fillette aperçoit, bondissant près du grand arbre, un lièvre au pelage tout blanc, aux yeux tout rouges... <color=red> (3) </color>";
+        textesPagesLivres[2] = "...et aux grandes dents <color=red> (1) </color> ! Il allait vers la forêt, tout excité en parlant très fort d’un grand magicien aux talents extraordinaires.";
         textesPagesLivres[3] = "Curieuse, Petit Chaperon Rouge suit le capucin. Ils s’enfoncent au cœur de la forêt, loin de la route. Enfin ils rencontrent le Grand magicien, debout dans une clairière à côté de son grand chapeau noir. Quelques animaux font la queue devant l’enchanteur, mais notre ami resquille.\n" +
             "– Salut petit lièvre blanc, aimerais-tu que je fasse un tour de magie pour toi ?\n" +
             "– J’aimerais..., j’aimerais me trouver dans un immense champs de carottes, oranges et craquantes !\n " +
@@ -130,19 +130,19 @@ public class LangageScript : MonoBehaviour
         textesPagesLivres[6] = "...DABRA ! <color=red> (1) </color>";
         textesPagesLivres[7] = "Le petit renard disparaît, Petit Chaperon Rouge applaudit aussi <color=red> (1) </color>. Il ne reste pas le moindre poil orange.\n" +
             "– Au suivant ! Salut petit oiseau noir, quel tour de magie aimerais-tu que je fasse pour toi ?\n" +
-            "– Je souhaiterais..., je souhaiterais voyager sur la lune, plus haut que tous les autres oiseaux !\n" +
+            "– Je souhaiterais..., je souhaiterais voyager sur la lune, plus haut que tous les autres oiseaux <color=red> (2) </color> !\n" +
             "Le petit oiseau ferme les yeux, le Grand magicien lève sa baguette, dessine trois cercles et d’une voix forte déclame :\n" +
-            "– ABRACA... <color=red> (2) </color>";
+            "– ABRACA... <color=red> (3) </color>";
         textesPagesLivres[8] = "...DABRA ! <color=red> (1) </color>";
         textesPagesLivres[9] = "L’oiseau disparaît sous les yeux du Petit Chaperon Rouge fascinée, il ne reste pas une petite plume noire. Curieuse elle regarde le Grand magicien tout poilu, qu’elle n’avait jamais rencontré et il lui semblait normal, gentil. Elle le salue avec chaleur. Le grand débraillé à la queue touffue au sourire roublard lui demande :\n" +
             "– Salut petite fille toute rouge, toi aussi tu souhaites que je fasse un tour de magie ?\n" +
-            "– S’il vous plaît..., s’il vous plaît, monsieur le magicien, envoyez-moi chez ma grand-mère, elle est malade et je lui apporte ce panier avec des galettes et du vin.\n" +
+            "– S’il vous plaît..., s’il vous plaît, monsieur le magicien, envoyez-moi chez ma grand-mère, elle est malade et je lui apporte ce panier avec des galettes et du vin <color=red> (1) </color>.\n" +
             "– Oh! C’est mignon tout plein. Alors vite je vais exhausser ton vœux, tu es prête ?\n" +
             "La petite fille ferme les yeux, la baguette magique se lève, s’agite et une voix caverneuse éructe :\n" +
-            "– ABRACA... <color=red> (1) </color>";
+            "– ABRACA... <color=red> (2) </color>";
         textesPagesLivres[10] = "...DABRA ! <color=red> (1) </color>";
         textesPagesLivres[11] = "Le Petit Chaperon Rouge et le Grand magicien ont disparu, il ne reste pas le moindre bout de laine rouge, pas le moindre petit poil gris.\n" +
-            "Petit Chaperon Rouge n’est pas arrivé chez sa grand-mère, elle est là, au milieu d’un grand champs de fleurs. Mais ou est le grand magicien ?...";
+            "Petit Chaperon Rouge n’est pas arrivé chez sa grand-mère, elle est là, au milieu d’un grand champs de fleurs <color=red> (1) </color>. Mais ou est le grand magicien ?...";
         textesPagesLivres[12] = "... là, tout près d’une maison, celle de la grand-mère.\n" +
             "Et il use de tout ses talents, fait disparaître la vieille <color=red> (1) </color>, mets ses habits et puis confortablement s’installe dans son lit pour attendre le Petit Chaperon Rouge, un sourire gourmand sur les lèvres.";
         textesPagesLivres[13] = "La petite fille arrive, joyeuse, c’est la maison de Grand-mère, elle entre. <color=red> (1) </color>";
@@ -157,15 +157,15 @@ public class LangageScript : MonoBehaviour
         textesPagesLivres[16] = "La voix est tonitruante. La petite fille est terrorisée. Par magie elle disparaît instantanément. <color=red> (1) </color>";
         textesPagesLivres[17] = "Mais la voix est si forte qu’un chasseur qui passait par là s’interroge :\n" +
             "– Bizarre, je ne savais pas que la vieille s’était mise à la magie.\n" +
-            "Il s’approche de la maison, toque une fois, deux fois à la porte, vite fait tomber la chevillette, entre <color=red> (1) </color>, et tout de suite comprend la situation.\n" +
+            "Il s’approche de la maison <color=red> (1) </color>, toque une fois, deux fois à la porte, vite fait tomber la chevillette, entre <color=red> (2) </color>, et tout de suite comprend la situation.\n" +
             "Discrètement il prend la baguette magique, et tel un magicien expérimenté la lève, fait les trois cercleset crie :\n" +
-            "– ABRACA... <color=red> (2) </color>";
+            "– ABRACA... <color=red> (3) </color>";
         textesPagesLivres[18] = "...DABRA ! <color=red> (1) </color>";
         textesPagesLivres[19] = "Aussitôt, le loup grand magicien disparaît, et, la grand-mère un peu endormie, Petit Chaperon Rouge un peu engourdie, le renard et le lièvre tout tremblotants sortent du chapeau magique. Ils se mettent à danser, heureux d’être à nouveau libres.\n" +
             "Qui pense au petit oiseau et au grand loup ?\n \n" +
             "Le chasseur, intimidé, prononce encore quelques formules magiques qu’il avait entendu dans sa jeunesse :";
         textesPagesLivres[20] = "– ABRACADABRA, ABRACADABRA ! <color=red> (1) </color>\n" +
-            "Le Grand débraillé à la queue touffue ne réapparut jamais. Parfois au fond du chapeau on entend son rire roublard, surtout les nuits de pleine lune.";
+            "Le Grand débraillé à la queue touffue ne réapparut jamais. Parfois au fond du chapeau on entend son rire roublard, surtout les nuits de pleine lune <color=red> (2) </color>.";
 
         creditsPageTexte = "Le Petit Chaperon rouge et le Magicien | Takacs Marie | Callicéphale 2015";
 

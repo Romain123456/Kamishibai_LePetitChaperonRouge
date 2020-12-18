@@ -244,7 +244,7 @@ public class LivreManagement : MonoBehaviour
                                     pageLivreArray[ii].GetComponent<PageLivreScript>().sonsIndep[jj].GetComponent<RectTransform>().anchoredPosition3D = new Vector3(0, -9.0f, 0);
                                 } else if(pageLivreArray[ii].GetComponent<PageLivreScript>().nbSonsIndep > 1)
                                 {
-                                    pageLivreArray[ii].GetComponent<PageLivreScript>().sonsIndep[jj].GetComponent<RectTransform>().anchoredPosition3D = new Vector3(-35.0f + (jj * 70.0f), -9.0f, 0);
+                                    pageLivreArray[ii].GetComponent<PageLivreScript>().sonsIndep[jj].GetComponent<RectTransform>().anchoredPosition3D = new Vector3(-75.0f + (jj * 70.0f), -9.0f, 0);
                                 }
                                 pageLivreArray[ii].GetComponent<PageLivreScript>().sonsIndep[jj].GetComponent<BoutonSonIndepScript>().sonIndepClip = listeSonsLivre[(int)livre.codesSonIndep[compteurCodeSonIndep].z];
                                 pageLivreArray[ii].GetComponent<PageLivreScript>().sonsIndep[jj].GetComponent<Image>().sprite = listeSpriteLivre[(int)livre.codesSonIndep[compteurCodeSonIndep].z];
