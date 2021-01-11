@@ -6,6 +6,7 @@ public class BoutonSonIndepScript : MonoBehaviour
 {
     [HideInInspector] public AudioSource sonIndepAudioSource;
     [HideInInspector] public AudioClip sonIndepClip;
+    [HideInInspector] public float volumeClip;
     private LivreManagement scriptLivreManagement;
 
     void Start()
@@ -18,6 +19,7 @@ public class BoutonSonIndepScript : MonoBehaviour
     {
         if (!scriptLivreManagement.isSonPause)
         {
+            sonIndepAudioSource.volume = volumeClip;
             sonIndepAudioSource.PlayOneShot(sonIndepClip);
         }
     }
