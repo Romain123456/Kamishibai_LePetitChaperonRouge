@@ -2940,6 +2940,7 @@ MonoBehaviour:
     type: 3}
   nbPagesLivre: 21
   pageLivreArray: []
+  kamishibai_Mixer: {fileID: 24100000, guid: 2b6314ad5f600ee44a512cdf8a1c4086, type: 2}
   ambianceGenarale_AudioSource: {fileID: 534669908}
   ambianceGeneraleAudioTemp: {fileID: 1676613525}
   sonsIndependants_AudioSource: {fileID: 1718407902}
@@ -3044,6 +3045,33 @@ MonoBehaviour:
   - {fileID: 21300000, guid: f81abd2215bed1b4ba7a5902d8c9da28, type: 3}
   - {fileID: 21300000, guid: f81abd2215bed1b4ba7a5902d8c9da28, type: 3}
   - {fileID: 21300000, guid: b98d7efadc52c28489b4cfb35330167c, type: 3}
+  volumesSonsIndep:
+  - 0.3
+  - 0.5
+  - 0.5
+  - 0.5
+  - 0.5
+  - 0.5
+  - 0.5
+  - 0.5
+  - 0.5
+  - 0.5
+  - 0.5
+  - 0.5
+  - 0.5
+  - 0.5
+  - 0.5
+  - 0.5
+  - 0.5
+  - 0.5
+  - 0.5
+  - 0.5
+  - 0.5
+  - 0.5
+  - 0.5
+  - 0.5
+  - 0.5
+  - 0.5
   contenuOuvert: {fileID: 0}
   isContenuPedagogique: 0
   contenuPedagogiquePanel: {fileID: 1883586563}
@@ -3152,7 +3180,7 @@ MonoBehaviour:
   langue: 
   currentPageLectAuto: 0
   nbLanguesDispo: 0
-  sonIndepBipVolume: {fileID: 8300000, guid: 30e52cff65505184cbcb193263953dca, type: 3}
+  sonIndepBipVolume: {fileID: 8300000, guid: d7fafe59d77d5844a9d3d1be5a58d695, type: 3}
   sliderSonIndepAudio: {fileID: 2024105173}
   livre:
     isPanelSonIndep: 000101010101010101010101010100000101010001
@@ -9384,10 +9412,10 @@ MonoBehaviour:
   m_FillRect: {fileID: 339327623}
   m_HandleRect: {fileID: 1508419820}
   m_Direction: 0
-  m_MinValue: 0
-  m_MaxValue: 1
+  m_MinValue: -80
+  m_MaxValue: 20
   m_WholeNumbers: 0
-  m_Value: 0.5
+  m_Value: 0
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
@@ -9411,7 +9439,8 @@ AudioSource:
   m_GameObject: {fileID: 1718407899}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 8056929045703083718, guid: 2b6314ad5f600ee44a512cdf8a1c4086,
+    type: 2}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
   m_Volume: 1
@@ -10739,7 +10768,8 @@ AudioSource:
   m_GameObject: {fileID: 2024105169}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 8056929045703083718, guid: 2b6314ad5f600ee44a512cdf8a1c4086,
+    type: 2}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
   m_Volume: 1

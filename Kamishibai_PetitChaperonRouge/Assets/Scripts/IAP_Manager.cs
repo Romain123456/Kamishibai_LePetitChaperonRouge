@@ -11,7 +11,8 @@ public class IAP_Manager : MonoBehaviour, IStoreListener
     private static IStoreController m_StoreController;          // The Unity Purchasing system.
     private static IExtensionProvider m_StoreExtensionProvider; // The store-specific Purchasing subsystems.
 
-    public static IAP_Manager Instance { set; get; }
+    public static IAP_Manager Instance { set; get; }    //Permet de ne pas instancier le script et d'accéder directement à ses fonctions
+    public static string _BuyEntireKamishibai = "buy_entire_kamishibai";        //Notre produit
 
     // Product identifiers for all products capable of being purchased: 
     // "convenience" general identifiers for use with Purchasing, and their store-specific identifier 
@@ -26,7 +27,6 @@ public class IAP_Manager : MonoBehaviour, IStoreListener
     /*public static string kProductIDConsumable = "consumable";
     public static string kProductIDNonConsumable = "nonconsumable";
     public static string kProductIDSubscription = "subscription";*/
-    public static string _BuyEntireKamishibai = "buy_entire_kamishibai";
 
     private void Awake()
     {
@@ -93,7 +93,8 @@ public class IAP_Manager : MonoBehaviour, IStoreListener
 
         // Create a builder, first passing in a suite of Unity provided stores.
         var builder = ConfigurationBuilder.Instance(StandardPurchasingModule.Instance());
-        builder.AddProduct(_BuyEntireKamishibai, ProductType.NonConsumable);
+
+        builder.AddProduct(_BuyEntireKamishibai, ProductType.NonConsumable);        //Ajout de l'achat du produit 
 
         // Add a product to sell / restore by way of its identifier, associating the general identifier
         // with its store-specific identifiers.
@@ -116,7 +117,7 @@ public class IAP_Manager : MonoBehaviour, IStoreListener
         return m_StoreController != null && m_StoreExtensionProvider != null;
     }
 
-    public void BuyEntireKamishibai()
+    public void BuyEntireKamishibai()       //Fonction pour le bouton de l'achat dans l'application
     {
         BuyProductID(_BuyEntireKamishibai);
     }
@@ -220,12 +221,16 @@ public class IAP_Manager : MonoBehaviour, IStoreListener
 
     public PurchaseProcessingResult ProcessPurchase(PurchaseEventArgs args)
     {
+
+        //Ce que fait le produit (à réitérer pour chaque produit !)
         if (String.Equals(args.purchasedProduct.definition.id, _BuyEntireKamishibai, StringComparison.Ordinal))
         {
             Debug.Log("You've just unlocked the entire Kamishibai ! Good reading !");
             GameObject.Find("Main Camera").GetComponent<LivreManagement>().appliDemo = false;
             // TODO: The non-consumable item has been successfully purchased, grant this item to the player.
         }
+        //
+
         // Or ... an unknown product has been purchased by this user. Fill in additional products here....
         else
         {

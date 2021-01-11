@@ -66,6 +66,7 @@ public class PageLectureAutoScript : MonoBehaviour
     IEnumerator LectureAutomatiqueDeroulement()
     {
         yield return new WaitForSeconds(livreManagement_script.tempsWaitLecture);
+        audioSourcePage.volume = 1.0f;
 
         if (!audioSourcePage.isPlaying && !livreManagement_script.isSonPause)
         {

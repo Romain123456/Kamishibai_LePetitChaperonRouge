@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
 using System.IO;
+using UnityEngine.Audio;
 
 public class LivreManagement : MonoBehaviour
 {
@@ -35,6 +36,9 @@ public class LivreManagement : MonoBehaviour
     public int nbPagesLivre;
     [HideInInspector] public GameObject[] pageLivreArray;
 
+    //AudioMixer
+    public AudioMixer kamishibai_Mixer;
+
     //AudioSource de l'ambiance Générale
     public AudioSource ambianceGenarale_AudioSource;
     public AudioSource ambianceGeneraleAudioTemp;
@@ -45,6 +49,7 @@ public class LivreManagement : MonoBehaviour
     public AudioClip ambianceMenuPrincipal;
     public AudioClip[] ambianceLivre;
 
+
     //Image de la page du livre
     public Sprite[] imagePage;
     public float speedTournePage;
@@ -52,6 +57,7 @@ public class LivreManagement : MonoBehaviour
     //Liste des sons/sprites du livre
     public AudioClip[] listeSonsLivre;
     public Sprite[] listeSpriteLivre;               //Mettre même indice de son et de sprite correspondant
+    public float[] volumesSonsIndep;
 
     //Génération Son Indépendant
     private int compteurCodeSonIndep = 0;
@@ -125,6 +131,8 @@ public class LivreManagement : MonoBehaviour
         ecranNoir.transform.SetAsLastSibling();
 
         Screen.sleepTimeout = SleepTimeout.NeverSleep;
+
+        
     }
 
     public IEnumerator FadeMoinsEcranNoir(Image fadeMoinsImage,float speedFade)
@@ -247,6 +255,7 @@ public class LivreManagement : MonoBehaviour
                                     pageLivreArray[ii].GetComponent<PageLivreScript>().sonsIndep[jj].GetComponent<RectTransform>().anchoredPosition3D = new Vector3(-75.0f + (jj * 70.0f), -9.0f, 0);
                                 }
                                 pageLivreArray[ii].GetComponent<PageLivreScript>().sonsIndep[jj].GetComponent<BoutonSonIndepScript>().sonIndepClip = listeSonsLivre[(int)livre.codesSonIndep[compteurCodeSonIndep].z];
+                                pageLivreArray[ii].GetComponent<PageLivreScript>().sonsIndep[jj].GetComponent<BoutonSonIndepScript>().volumeClip = volumesSonsIndep[(int)livre.codesSonIndep[compteurCodeSonIndep].z];
                                 pageLivreArray[ii].GetComponent<PageLivreScript>().sonsIndep[jj].GetComponent<Image>().sprite = listeSpriteLivre[(int)livre.codesSonIndep[compteurCodeSonIndep].z];
                                 pageLivreArray[ii].GetComponent<PageLivreScript>().sonsIndep[jj].transform.GetChild(0).GetComponent<Text>().text = (livre.codesSonIndep[compteurCodeSonIndep].y+1).ToString();
                                 compteurCodeSonIndep++;
@@ -388,7 +397,6 @@ public class LivreManagement : MonoBehaviour
         {
             panelLangueDepart.SetActive(true);
             sliderSonAmbiance.value = data.volSonAmbiance;
-
             sliderSonIndependant.value = data.volSonsIndep;
 
             currentPage = data.currentPage;
@@ -406,8 +414,9 @@ public class LivreManagement : MonoBehaviour
         }
         //ambianceGenarale_AudioSource.volume = sliderSonAmbiance.value;
         StartCoroutine(FadePlus_Volume(ambianceGenarale_AudioSource,0,2, sliderSonAmbiance.value));
-        sonsIndependants_AudioSource.volume = sliderSonIndependant.value;
-
+        //sonsIndependants_AudioSource.volume = sliderSonIndependant.value;
+        kamishibai_Mixer.SetFloat("SFX", sliderSonIndependant.value);
+        //Debug.Log("Mettre son Mixer");
     }
 
 
@@ -455,7 +464,7 @@ public class LivreManagement : MonoBehaviour
 
         //ControleAnimationPageTourne();
         //SonAmbianceInteractability();
-        //SonIndependantInteractability();
+        SonIndependantInteractability();
         EvolutionVariablesSaveSystem();
         BoutonsPanelPauseInteractability();
 
@@ -581,7 +590,6 @@ public class LivreManagement : MonoBehaviour
     public void SonAmbianceGestion()
     {
         ambianceGenarale_AudioSource.volume = sliderSonAmbiance.value;
-        //ambianceGeneraleAudioTemp.volume = sliderSonAmbiance.value;
     }
 
     public void SonAmbianceInteractability()
@@ -658,16 +666,18 @@ public class LivreManagement : MonoBehaviour
 
     public void SonIndependantGestion()
     {
-        sonsIndependants_AudioSource.volume = sliderSonIndependant.value;
+        //sonsIndependants_AudioSource.volume = sliderSonIndependant.value;
+        kamishibai_Mixer.SetFloat("SFX", sliderSonIndependant.value);
+        //Debug.Log("Mettre son du Mixer");
     }
 
     public void SonIndependantInteractability()
     {
-        if (!isSonPause && !sliderSonIndependant.interactable)
+        if (isSonPause && !sliderSonIndependant.interactable)
         {
             sliderSonIndependant.interactable = true;
         }
-        else if (isSonPause && sliderSonIndependant.interactable)
+        else if (!isSonPause && sliderSonIndependant.interactable)
         {
             sliderSonIndependant.interactable = false;
         }
@@ -709,7 +719,9 @@ public class LivreManagement : MonoBehaviour
     public void EvolutionVariablesSaveSystem()
     {
         volSonAmbiance = ambianceGenarale_AudioSource.volume;
-        volSonsIndep = sonsIndependants_AudioSource.volume;
+        //volSonsIndep = sonsIndependants_AudioSource.volume;
+        kamishibai_Mixer.GetFloat("SFX", out volSonsIndep);
+        //Debug.Log("Mettre son Mixer");
     }
 
 
@@ -821,9 +833,13 @@ public class LivreManagement : MonoBehaviour
     public AudioSource sliderSonIndepAudio;         //Posée sur Background du sliderSonInder
     public void BipSliderSonIndep()
     {
-        //Slider Son volume bip
-        sliderSonIndepAudio.volume = sonsIndependants_AudioSource.volume;
-        sliderSonIndepAudio.PlayOneShot(sonIndepBipVolume);
+        if (isSonPause)
+        {
+            //Slider Son volume bip
+            sliderSonIndepAudio.volume = sonsIndependants_AudioSource.volume;
+            //Debug.Log("Changer par le volume du Mixer");
+            sliderSonIndepAudio.PlayOneShot(sonIndepBipVolume);
+        }
     }
 
 
@@ -843,7 +859,7 @@ public class LivreManagement : MonoBehaviour
 
 
 
-    //Achat de l'appli complète
+    //Achat de l'appli complète (Fonction pour le bouton d'achat In App)
     public void BuyEntireKamishibai()
     {
         IAP_Manager.Instance.BuyEntireKamishibai();
