@@ -273,7 +273,7 @@ public class PageLivreScript : MonoBehaviour
         //On donne la nouvelle musique à l'audio principale et augmente progressivement le volume
         livreManagement_script.ambianceGenarale_AudioSource.clip = this.transform.parent.GetChild(newPage).GetComponent<PageLivreScript>().ambiancePage;
         livreManagement_script.ambianceGenarale_AudioSource.Play();
-        StartCoroutine(livreManagement_script.FadePlus_Volume(livreManagement_script.ambianceGenarale_AudioSource,0, livreManagement_script.timeFadeChangePage, livreManagement_script.sliderSonAmbiance.value));
+        StartCoroutine(livreManagement_script.FadePlus_Volume(livreManagement_script.ambianceGenarale_AudioSource,0, livreManagement_script.timeFadeChangePage, newPage));
 
 
         while (livreManagement_script.ambianceGeneraleAudioTemp.volume > 0)
