@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.37311992, g: 0.38074034, b: 0.35872713, a: 1}
+  m_IndirectSpecularColor: {r: 0.37311953, g: 0.38074014, b: 0.3587274, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -2944,11 +2944,11 @@ MonoBehaviour:
   ambianceGenarale_AudioSource: {fileID: 534669908}
   ambianceGeneraleAudioTemp: {fileID: 1676613525}
   sonsIndependants_AudioSource: {fileID: 1718407902}
-  ambianceMenuPrincipal: {fileID: 8300000, guid: d589002da41df1844b4fe0e871672d44,
+  ambianceMenuPrincipal: {fileID: 8300000, guid: fbe6c74c6c7dade43bbe26da24762dda,
     type: 3}
   ambianceLivre:
   - {fileID: 8300000, guid: d589002da41df1844b4fe0e871672d44, type: 3}
-  - {fileID: 8300000, guid: d589002da41df1844b4fe0e871672d44, type: 3}
+  - {fileID: 8300000, guid: fbe6c74c6c7dade43bbe26da24762dda, type: 3}
   - {fileID: 8300000, guid: d589002da41df1844b4fe0e871672d44, type: 3}
   - {fileID: 8300000, guid: e4813af4d2d4c0440914fa20070f2d1f, type: 3}
   - {fileID: 8300000, guid: e4813af4d2d4c0440914fa20070f2d1f, type: 3}
@@ -3180,7 +3180,7 @@ MonoBehaviour:
   langue: 
   currentPageLectAuto: 0
   nbLanguesDispo: 0
-  sonIndepBipVolume: {fileID: 8300000, guid: d7fafe59d77d5844a9d3d1be5a58d695, type: 3}
+  sonIndepBipVolume: {fileID: 0}
   sliderSonIndepAudio: {fileID: 2024105173}
   livre:
     isPanelSonIndep: 000101010101010101010101010100000101010001
@@ -3224,7 +3224,8 @@ AudioSource:
   m_GameObject: {fileID: 534669902}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 5266799939205734946, guid: 2b6314ad5f600ee44a512cdf8a1c4086,
+    type: 2}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
   m_Volume: 0
@@ -8970,7 +8971,8 @@ AudioSource:
   m_GameObject: {fileID: 1676613523}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 5266799939205734946, guid: 2b6314ad5f600ee44a512cdf8a1c4086,
+    type: 2}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
   m_Volume: 0.5
