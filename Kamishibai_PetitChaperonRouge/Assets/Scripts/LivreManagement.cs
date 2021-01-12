@@ -48,6 +48,7 @@ public class LivreManagement : MonoBehaviour
     public AudioSource sonsIndependants_AudioSource;
     public AudioClip ambianceMenuPrincipal;
     public AudioClip[] ambianceLivre;
+    public float[] ambianceLivreVolume;
 
 
     //Image de la page du livre
@@ -413,15 +414,17 @@ public class LivreManagement : MonoBehaviour
             panelPause.SetActive(false);
         }
         //ambianceGenarale_AudioSource.volume = sliderSonAmbiance.value;
-        StartCoroutine(FadePlus_Volume(ambianceGenarale_AudioSource,0,2, sliderSonAmbiance.value));
+        StartCoroutine(FadePlus_Volume(ambianceGenarale_AudioSource, 0, 2, 0));
+        //StartCoroutine(FadePlus_Volume(ambianceGenarale_AudioSource,0,2, sliderSonAmbiance.value));
         //sonsIndependants_AudioSource.volume = sliderSonIndependant.value;
         kamishibai_Mixer.SetFloat("SFX", sliderSonIndependant.value);
         //Debug.Log("Mettre son Mixer");
     }
 
 
-    public IEnumerator FadePlus_Volume(AudioSource monAudioSource,float volBase,float tpsFade,float volTarget)
+    public IEnumerator FadePlus_Volume(AudioSource monAudioSource,float volBase,float tpsFade,int indAmbiance)
     {
+        float volTarget = ambianceLivreVolume[indAmbiance];
         monAudioSource.volume = volBase;
         float stepVol = Time.fixedDeltaTime * volTarget / tpsFade;
 
@@ -464,7 +467,7 @@ public class LivreManagement : MonoBehaviour
 
         //ControleAnimationPageTourne();
         //SonAmbianceInteractability();
-        SonIndependantInteractability();
+        //SonIndependantInteractability();
         EvolutionVariablesSaveSystem();
         BoutonsPanelPauseInteractability();
 
@@ -589,7 +592,8 @@ public class LivreManagement : MonoBehaviour
 
     public void SonAmbianceGestion()
     {
-        ambianceGenarale_AudioSource.volume = sliderSonAmbiance.value;
+        //ambianceGenarale_AudioSource.volume = sliderSonAmbiance.value;
+        kamishibai_Mixer.SetFloat("AMB", sliderSonAmbiance.value);
     }
 
     public void SonAmbianceInteractability()
@@ -718,10 +722,11 @@ public class LivreManagement : MonoBehaviour
 
     public void EvolutionVariablesSaveSystem()
     {
-        volSonAmbiance = ambianceGenarale_AudioSource.volume;
+        //volSonAmbiance = ambianceGenarale_AudioSource.volume;
+        kamishibai_Mixer.GetFloat("AMB", out volSonAmbiance);
+        //Debug.Log("Mettre son Mixer");
         //volSonsIndep = sonsIndependants_AudioSource.volume;
         kamishibai_Mixer.GetFloat("SFX", out volSonsIndep);
-        //Debug.Log("Mettre son Mixer");
     }
 
 

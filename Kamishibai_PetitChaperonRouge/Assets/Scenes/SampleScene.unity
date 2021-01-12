@@ -2968,6 +2968,28 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 3ef2aeb9bacf6214382ed4141d8597b1, type: 3}
   - {fileID: 8300000, guid: 3ef2aeb9bacf6214382ed4141d8597b1, type: 3}
   - {fileID: 8300000, guid: 3ef2aeb9bacf6214382ed4141d8597b1, type: 3}
+  ambianceLivreVolume:
+  - 0.8
+  - 0.8
+  - 0.8
+  - 0.8
+  - 0.8
+  - 0.8
+  - 0.8
+  - 0.8
+  - 0.8
+  - 0.8
+  - 0.8
+  - 0.8
+  - 0.8
+  - 0.8
+  - 0.8
+  - 0.8
+  - 0.8
+  - 0.8
+  - 0.8
+  - 0.8
+  - 0.8
   imagePage:
   - {fileID: 21300000, guid: a9b4ceb86d6fa454db1346b722155645, type: 3}
   - {fileID: 21300000, guid: ad17be890093e644dacb1c9abdd44a2e, type: 3}
@@ -3224,7 +3246,8 @@ AudioSource:
   m_GameObject: {fileID: 534669902}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 5266799939205734946, guid: 2b6314ad5f600ee44a512cdf8a1c4086,
+    type: 2}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
   m_Volume: 0
@@ -8160,10 +8183,10 @@ MonoBehaviour:
   m_FillRect: {fileID: 132150159}
   m_HandleRect: {fileID: 1882671640}
   m_Direction: 0
-  m_MinValue: 0
-  m_MaxValue: 1
+  m_MinValue: -80
+  m_MaxValue: 20
   m_WholeNumbers: 0
-  m_Value: 0.5
+  m_Value: 0
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
@@ -9543,18 +9566,7 @@ MonoBehaviour:
   - eventID: 14
     callback:
       m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 534669907}
-          m_MethodName: BipSliderSonIndep
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
+        m_Calls: []
 --- !u!1001 &1736308243
 PrefabInstance:
   m_ObjectHideFlags: 0
