@@ -275,7 +275,7 @@ public class Fonctions_Utiles : MonoBehaviour {
             {
                 GameObject.Find("Main Camera").GetComponent<LivreManagement>().panelLivre.transform.GetChild(ii).gameObject.SetActive(true);
 
-                StartCoroutine(TransitionDeuxAmbiances(GameObject.Find("Main Camera").GetComponent<LivreManagement>().timeFadeOpenLivre, GameObject.Find("Main Camera").GetComponent<LivreManagement>().ambianceGenarale_AudioSource.clip, GameObject.Find("Main Camera").GetComponent<LivreManagement>().panelLivre.transform.GetChild(ii).GetComponent<PageLivreScript>().ambiancePage));
+                StartCoroutine(TransitionDeuxAmbiances(GameObject.Find("Main Camera").GetComponent<LivreManagement>().timeFadeOpenLivre, GameObject.Find("Main Camera").GetComponent<LivreManagement>().ambianceGenarale_AudioSource.clip, GameObject.Find("Main Camera").GetComponent<LivreManagement>().panelLivre.transform.GetChild(ii).GetComponent<PageLivreScript>().ambiancePage, GameObject.Find("Main Camera").GetComponent<LivreManagement>().currentPage));
 
             }
             else
@@ -340,7 +340,7 @@ public class Fonctions_Utiles : MonoBehaviour {
             {
                 GameObject.Find("Main Camera").GetComponent<LivreManagement>().panelLivre.transform.GetChild(ii).gameObject.SetActive(true);
 
-                StartCoroutine(TransitionDeuxAmbiances(GameObject.Find("Main Camera").GetComponent<LivreManagement>().timeFadeOpenLivre, GameObject.Find("Main Camera").GetComponent<LivreManagement>().ambianceGenarale_AudioSource.clip, GameObject.Find("Main Camera").GetComponent<LivreManagement>().panelLivre.transform.GetChild(ii).GetComponent<PageLivreScript>().ambiancePage));
+                StartCoroutine(TransitionDeuxAmbiances(GameObject.Find("Main Camera").GetComponent<LivreManagement>().timeFadeOpenLivre, GameObject.Find("Main Camera").GetComponent<LivreManagement>().ambianceGenarale_AudioSource.clip, GameObject.Find("Main Camera").GetComponent<LivreManagement>().panelLivre.transform.GetChild(ii).GetComponent<PageLivreScript>().ambiancePage,ii));
 
             }
             else
@@ -411,7 +411,7 @@ public class Fonctions_Utiles : MonoBehaviour {
             {
                 GameObject.Find("Main Camera").GetComponent<LivreManagement>().panelLectureAuto.transform.GetChild(ii).gameObject.SetActive(true);
 
-                StartCoroutine(TransitionDeuxAmbiances(GameObject.Find("Main Camera").GetComponent<LivreManagement>().timeFadeOpenLivre, GameObject.Find("Main Camera").GetComponent<LivreManagement>().ambianceGenarale_AudioSource.clip, GameObject.Find("Main Camera").GetComponent<LivreManagement>().panelLectureAuto.transform.GetChild(ii).GetComponent<PageLectureAutoScript>().ambiancePage));
+                StartCoroutine(TransitionDeuxAmbiances(GameObject.Find("Main Camera").GetComponent<LivreManagement>().timeFadeOpenLivre, GameObject.Find("Main Camera").GetComponent<LivreManagement>().ambianceGenarale_AudioSource.clip, GameObject.Find("Main Camera").GetComponent<LivreManagement>().panelLectureAuto.transform.GetChild(ii).GetComponent<PageLectureAutoScript>().ambiancePage,ii));
 
             }
             else
@@ -476,7 +476,7 @@ public class Fonctions_Utiles : MonoBehaviour {
                 GameObject.Find("Main Camera").GetComponent<LivreManagement>().panelLectureAuto.transform.GetChild(ii).GetComponent<PageLectureAutoScript>().isLectureLaunch = false;
                 GameObject.Find("Main Camera").GetComponent<LivreManagement>().panelLectureAuto.transform.GetChild(ii).gameObject.SetActive(true);
 
-                StartCoroutine(TransitionDeuxAmbiances(GameObject.Find("Main Camera").GetComponent<LivreManagement>().timeFadeOpenLivre, GameObject.Find("Main Camera").GetComponent<LivreManagement>().ambianceGenarale_AudioSource.clip, GameObject.Find("Main Camera").GetComponent<LivreManagement>().panelLectureAuto.transform.GetChild(ii).GetComponent<PageLectureAutoScript>().ambiancePage));
+                StartCoroutine(TransitionDeuxAmbiances(GameObject.Find("Main Camera").GetComponent<LivreManagement>().timeFadeOpenLivre, GameObject.Find("Main Camera").GetComponent<LivreManagement>().ambianceGenarale_AudioSource.clip, GameObject.Find("Main Camera").GetComponent<LivreManagement>().panelLectureAuto.transform.GetChild(ii).GetComponent<PageLectureAutoScript>().ambiancePage,ii));
 
             }
             else
@@ -493,7 +493,7 @@ public class Fonctions_Utiles : MonoBehaviour {
 
 
     //Fade du changement de son
-    IEnumerator TransitionDeuxAmbiances(float tpsFade, AudioClip fadeMoinsClip, AudioClip fadePlusClip)
+    IEnumerator TransitionDeuxAmbiances(float tpsFade, AudioClip fadeMoinsClip, AudioClip fadePlusClip,int indAmbiance)
     {
         //On passe la musique en cours sur l'audio temporaire et on diminue progressivement le volume
         GameObject.Find("Main Camera").GetComponent<LivreManagement>().ambianceGeneraleAudioTemp.clip = fadeMoinsClip;
@@ -506,7 +506,7 @@ public class Fonctions_Utiles : MonoBehaviour {
         //On donne la nouvelle musique à l'audio principale et augmente progressivement le volume
         GameObject.Find("Main Camera").GetComponent<LivreManagement>().ambianceGenarale_AudioSource.clip = fadePlusClip; //GameObject.Find("Main Camera").GetComponent<LivreManagement>().panelLivre.transform.GetChild(ii).GetComponent<PageLivreScript>().ambiancePage;
         GameObject.Find("Main Camera").GetComponent<LivreManagement>().ambianceGenarale_AudioSource.Play();
-        StartCoroutine(GameObject.Find("Main Camera").GetComponent<LivreManagement>().FadePlus_Volume(GameObject.Find("Main Camera").GetComponent<LivreManagement>().ambianceGenarale_AudioSource, 0, tpsFade, GameObject.Find("Main Camera").GetComponent<LivreManagement>().sliderSonAmbiance.value));
+        StartCoroutine(GameObject.Find("Main Camera").GetComponent<LivreManagement>().FadePlus_Volume(GameObject.Find("Main Camera").GetComponent<LivreManagement>().ambianceGenarale_AudioSource, 0, tpsFade, indAmbiance));
 
 
         while (GameObject.Find("Main Camera").GetComponent<LivreManagement>().ambianceGeneraleAudioTemp.volume > 0)
@@ -559,7 +559,7 @@ public class Fonctions_Utiles : MonoBehaviour {
                 }
             }
         }
-        GameObject.Find("Main Camera").GetComponent<LivreManagement>().panelPause.SetActive(true);
+        
 
         if (GameObject.Find("Main Camera").GetComponent<LivreManagement>().contenuOuvert != null)
         {
@@ -571,13 +571,16 @@ public class Fonctions_Utiles : MonoBehaviour {
                 {
                     GameObject.Find("Main Camera").GetComponent<LivreManagement>().PanelPauseSonPause();
                 }
-                StartCoroutine(TransitionDeuxAmbiances(GameObject.Find("Main Camera").GetComponent<LivreManagement>().timeFadeOpenLivre, GameObject.Find("Main Camera").GetComponent<LivreManagement>().ambianceGenarale_AudioSource.clip, GameObject.Find("Main Camera").GetComponent<LivreManagement>().ambianceMenuPrincipal));
+                StartCoroutine(TransitionDeuxAmbiances(GameObject.Find("Main Camera").GetComponent<LivreManagement>().timeFadeOpenLivre, GameObject.Find("Main Camera").GetComponent<LivreManagement>().ambianceGenarale_AudioSource.clip, GameObject.Find("Main Camera").GetComponent<LivreManagement>().ambianceMenuPrincipal,0));
             }
 
             GameObject.Find("Main Camera").GetComponent<LivreManagement>().contenuOuvert = null;
             GameObject.Find("Main Camera").GetComponent<LivreManagement>().sonsIndependants_AudioSource.Stop();
 
         }
+
+        GameObject.Find("Main Camera").GetComponent<LivreManagement>().panelPause.SetActive(true);
+        GameObject.Find("Main Camera").GetComponent<LivreManagement>().panelPause.GetComponent<RectTransform>().localScale = Vector3.one;
         DeselectEventSystem(GameObject.Find("Main Camera").GetComponent<LivreManagement>().monEvent);
     }
 

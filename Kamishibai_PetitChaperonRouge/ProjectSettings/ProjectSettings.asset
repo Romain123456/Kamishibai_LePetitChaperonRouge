@@ -165,7 +165,7 @@ PlayerSettings:
   applicationIdentifier:
     Android: com.SONODECK.LivreProto
   buildNumber: {}
-  AndroidBundleVersionCode: 13
+  AndroidBundleVersionCode: 14
   AndroidMinSdkVersion: 19
   AndroidTargetSdkVersion: 29
   AndroidPreferredInstallLocation: 1
