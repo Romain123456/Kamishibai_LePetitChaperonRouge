@@ -2944,21 +2944,21 @@ MonoBehaviour:
   ambianceGenarale_AudioSource: {fileID: 534669908}
   ambianceGeneraleAudioTemp: {fileID: 1676613525}
   sonsIndependants_AudioSource: {fileID: 1718407902}
-  ambianceMenuPrincipal: {fileID: 8300000, guid: d589002da41df1844b4fe0e871672d44,
+  ambianceMenuPrincipal: {fileID: 8300000, guid: f943630a11de99741b6240f66d8ea603,
     type: 3}
   ambianceLivre:
   - {fileID: 8300000, guid: d589002da41df1844b4fe0e871672d44, type: 3}
+  - {fileID: 8300000, guid: f943630a11de99741b6240f66d8ea603, type: 3}
   - {fileID: 8300000, guid: d589002da41df1844b4fe0e871672d44, type: 3}
+  - {fileID: 8300000, guid: e4813af4d2d4c0440914fa20070f2d1f, type: 3}
+  - {fileID: 8300000, guid: e4813af4d2d4c0440914fa20070f2d1f, type: 3}
+  - {fileID: 8300000, guid: e4813af4d2d4c0440914fa20070f2d1f, type: 3}
+  - {fileID: 8300000, guid: e4813af4d2d4c0440914fa20070f2d1f, type: 3}
+  - {fileID: 8300000, guid: e4813af4d2d4c0440914fa20070f2d1f, type: 3}
+  - {fileID: 8300000, guid: e4813af4d2d4c0440914fa20070f2d1f, type: 3}
+  - {fileID: 8300000, guid: e4813af4d2d4c0440914fa20070f2d1f, type: 3}
+  - {fileID: 8300000, guid: e4813af4d2d4c0440914fa20070f2d1f, type: 3}
   - {fileID: 8300000, guid: d589002da41df1844b4fe0e871672d44, type: 3}
-  - {fileID: 8300000, guid: e4813af4d2d4c0440914fa20070f2d1f, type: 3}
-  - {fileID: 8300000, guid: e4813af4d2d4c0440914fa20070f2d1f, type: 3}
-  - {fileID: 8300000, guid: e4813af4d2d4c0440914fa20070f2d1f, type: 3}
-  - {fileID: 8300000, guid: e4813af4d2d4c0440914fa20070f2d1f, type: 3}
-  - {fileID: 8300000, guid: e4813af4d2d4c0440914fa20070f2d1f, type: 3}
-  - {fileID: 8300000, guid: e4813af4d2d4c0440914fa20070f2d1f, type: 3}
-  - {fileID: 8300000, guid: e4813af4d2d4c0440914fa20070f2d1f, type: 3}
-  - {fileID: 8300000, guid: e4813af4d2d4c0440914fa20070f2d1f, type: 3}
-  - {fileID: 8300000, guid: e4813af4d2d4c0440914fa20070f2d1f, type: 3}
   - {fileID: 8300000, guid: 3ef2aeb9bacf6214382ed4141d8597b1, type: 3}
   - {fileID: 8300000, guid: 3ef2aeb9bacf6214382ed4141d8597b1, type: 3}
   - {fileID: 8300000, guid: 3ef2aeb9bacf6214382ed4141d8597b1, type: 3}
@@ -2969,27 +2969,27 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 3ef2aeb9bacf6214382ed4141d8597b1, type: 3}
   - {fileID: 8300000, guid: 3ef2aeb9bacf6214382ed4141d8597b1, type: 3}
   ambianceLivreVolume:
-  - 0.25
-  - 0.15
-  - 0.05
-  - 0.35
+  - 0.5
+  - 0.5
   - 0.45
   - 0.55
-  - 0.65
-  - 0.75
-  - 0.85
-  - 0.95
-  - 0.1
-  - 0.2
-  - 0.3
-  - 0.4
   - 0.5
-  - 0.6
-  - 0.7
-  - 0.8
-  - 0.9
-  - 1
-  - 0.52
+  - 0.45
+  - 0.5
+  - 0.55
+  - 0.5
+  - 0.33
+  - 0.35
+  - 0.35
+  - 0.35
+  - 0.35
+  - 0.35
+  - 0.35
+  - 0.35
+  - 0.35
+  - 0.4
+  - 0.33
+  - 0.4
   imagePage:
   - {fileID: 21300000, guid: a9b4ceb86d6fa454db1346b722155645, type: 3}
   - {fileID: 21300000, guid: ad17be890093e644dacb1c9abdd44a2e, type: 3}
@@ -3070,30 +3070,30 @@ MonoBehaviour:
   volumesSonsIndep:
   - 0.3
   - 0.5
-  - 0.5
-  - 0.5
-  - 0.5
-  - 0.5
-  - 0.5
-  - 0.5
-  - 0.5
-  - 0.5
-  - 0.5
-  - 0.5
-  - 0.5
-  - 0.5
-  - 0.5
-  - 0.5
-  - 0.5
-  - 0.5
-  - 0.5
-  - 0.5
-  - 0.5
-  - 0.5
-  - 0.5
-  - 0.5
-  - 0.5
-  - 0.5
+  - 0.8
+  - 0.8
+  - 0.8
+  - 0.8
+  - 0.8
+  - 0.8
+  - 0.8
+  - 0.8
+  - 0.8
+  - 0.8
+  - 0.8
+  - 0.8
+  - 0.8
+  - 0.8
+  - 0.8
+  - 0.8
+  - 0.8
+  - 0.8
+  - 0.8
+  - 0.8
+  - 0.8
+  - 0.8
+  - 0.8
+  - 0.8
   contenuOuvert: {fileID: 0}
   isContenuPedagogique: 0
   contenuPedagogiquePanel: {fileID: 1883586563}
