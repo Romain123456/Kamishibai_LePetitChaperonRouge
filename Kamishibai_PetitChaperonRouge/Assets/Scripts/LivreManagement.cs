@@ -414,7 +414,7 @@ public class LivreManagement : MonoBehaviour
             panelPause.SetActive(false);
         }
         //ambianceGenarale_AudioSource.volume = sliderSonAmbiance.value;
-        StartCoroutine(FadePlus_Volume(ambianceGenarale_AudioSource, 0, 2, 0));
+        StartCoroutine(FadePlus_Volume(ambianceGenarale_AudioSource, 0, 2, ambianceLivreVolume.Length-1));
         //StartCoroutine(FadePlus_Volume(ambianceGenarale_AudioSource,0,2, sliderSonAmbiance.value));
         //sonsIndependants_AudioSource.volume = sliderSonIndependant.value;
         kamishibai_Mixer.SetFloat("SFX", sliderSonIndependant.value);

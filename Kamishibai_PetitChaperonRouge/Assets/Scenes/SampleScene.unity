@@ -38,13 +38,13 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.37311992, g: 0.38074034, b: 0.35872713, a: 1}
+  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 11
-  m_GIWorkflowMode: 0
+  m_GIWorkflowMode: 1
   m_GISettings:
     serializedVersion: 2
     m_BounceScale: 1
@@ -2969,27 +2969,27 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 3ef2aeb9bacf6214382ed4141d8597b1, type: 3}
   - {fileID: 8300000, guid: 3ef2aeb9bacf6214382ed4141d8597b1, type: 3}
   ambianceLivreVolume:
+  - 0.25
+  - 0.15
+  - 0.05
+  - 0.35
+  - 0.45
+  - 0.55
+  - 0.65
+  - 0.75
+  - 0.85
+  - 0.95
+  - 0.1
+  - 0.2
+  - 0.3
+  - 0.4
+  - 0.5
+  - 0.6
+  - 0.7
   - 0.8
-  - 0.8
-  - 0.8
-  - 0.8
-  - 0.8
-  - 0.8
-  - 0.8
-  - 0.8
-  - 0.8
-  - 0.8
-  - 0.8
-  - 0.8
-  - 0.8
-  - 0.8
-  - 0.8
-  - 0.8
-  - 0.8
-  - 0.8
-  - 0.8
-  - 0.8
-  - 0.8
+  - 0.9
+  - 1
+  - 0.52
   imagePage:
   - {fileID: 21300000, guid: a9b4ceb86d6fa454db1346b722155645, type: 3}
   - {fileID: 21300000, guid: ad17be890093e644dacb1c9abdd44a2e, type: 3}
