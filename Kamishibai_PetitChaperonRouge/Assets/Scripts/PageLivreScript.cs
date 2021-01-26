@@ -282,6 +282,7 @@ public class PageLivreScript : MonoBehaviour
             if(livreManagement_script.ambianceGeneraleAudioTemp.volume <= 0)
             {
                 livreManagement_script.ambianceGeneraleAudioTemp.volume = 0;
+                livreManagement_script.ambianceGenarale_AudioSource.volume = livreManagement_script.ambianceLivreVolume[newPage];
                 canDesactive = true;
                 break;
             }
