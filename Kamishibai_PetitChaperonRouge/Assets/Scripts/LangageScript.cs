@@ -137,7 +137,7 @@ public class LangageScript : MonoBehaviour
         textesPagesLivres[9] = "L’oiseau disparaît sous les yeux du Petit Chaperon Rouge fascinée, il ne reste pas une petite plume noire. Curieuse elle regarde le Grand magicien tout poilu, qu’elle n’avait jamais rencontré et il lui semblait normal, gentil. Elle le salue avec chaleur. Le grand débraillé à la queue touffue au sourire roublard lui demande :\n" +
             "– Salut petite fille toute rouge, toi aussi tu souhaites que je fasse un tour de magie ?\n" +
             "– S’il vous plaît..., s’il vous plaît, monsieur le magicien, envoyez-moi chez ma grand-mère, elle est malade et je lui apporte ce panier avec des galettes et du vin <color=red> (1) </color>.\n" +
-            "– Oh! C’est mignon tout plein. Alors vite je vais exhausser ton vœux, tu es prête ?\n" +
+            "– Oh! C’est mignon tout plein. Alors vite je vais exaucer ton vœux, tu es prête ?\n" +
             "La petite fille ferme les yeux, la baguette magique se lève, s’agite et une voix caverneuse éructe :\n" +
             "– ABRACA... <color=red> (2) </color>";
         textesPagesLivres[10] = "...DABRA ! <color=red> (1) </color>";
