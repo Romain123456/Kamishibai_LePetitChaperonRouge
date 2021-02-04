@@ -123,7 +123,7 @@ public class PageLectureAutoScript : MonoBehaviour
                 //PopUp Achète
                 livreManagement_script.panelPopUpEnceinte.SetActive(true);
                 livreManagement_script.transform.GetComponent<LangageScript>().textPopUpEnceinte.text = livreManagement_script.transform.GetComponent<LangageScript>()._AchetePopUp;
-                livreManagement_script.transform.GetComponent<LangageScript>().textPopUpEnceinte.GetComponent<RectTransform>().anchoredPosition = new Vector2(0, 40);
+                livreManagement_script.transform.GetComponent<LangageScript>().textPopUpEnceinte.GetComponent<RectTransform>().anchoredPosition = new Vector2(0, 120);
                 livreManagement_script.panelPopUpEnceinte.transform.Find("PanelAchats").gameObject.SetActive(true);
                 livreManagement_script.panelPopUpEnceinte.transform.Find("PanelDontAsk").gameObject.SetActive(false);
             }
