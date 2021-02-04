@@ -131,7 +131,7 @@ public class Fonctions_Utiles : MonoBehaviour {
                     GameObject.Find("Main Camera").GetComponent<LivreManagement>().panelPopUpEnceinte.SetActive(true);
                     GameObject.Find("Main Camera").transform.GetComponent<LangageScript>().textPopUpEnceinte.transform.SetAsFirstSibling();
                     GameObject.Find("Main Camera").GetComponent<LangageScript>().textPopUpEnceinte.text = GameObject.Find("Main Camera").GetComponent<LangageScript>()._TextePopUpEnceinte;
-                    GameObject.Find("Main Camera").GetComponent<LangageScript>().textPopUpEnceinte.GetComponent<RectTransform>().anchoredPosition = Vector2.zero;
+                    GameObject.Find("Main Camera").GetComponent<LangageScript>().textPopUpEnceinte.GetComponent<RectTransform>().anchoredPosition = new Vector2(0,-42);
                     GameObject.Find("Main Camera").GetComponent<LivreManagement>().panelPopUpEnceinte.transform.Find("PanelAchats").gameObject.SetActive(false);
                     GameObject.Find("Main Camera").GetComponent<LivreManagement>().panelPopUpEnceinte.transform.Find("PanelDontAsk").gameObject.SetActive(true);
                 }
@@ -242,7 +242,7 @@ public class Fonctions_Utiles : MonoBehaviour {
                 GameObject.Find("Main Camera").GetComponent<LivreManagement>().panelPopUpEnceinte.transform.Find("PanelAchats").gameObject.SetActive(false);
                 GameObject.Find("Main Camera").transform.GetComponent<LangageScript>().textPopUpEnceinte.transform.SetAsFirstSibling();
                 GameObject.Find("Main Camera").GetComponent<LivreManagement>().panelPopUpEnceinte.transform.Find("PanelDontAsk").gameObject.SetActive(true);
-                GameObject.Find("Main Camera").GetComponent<LangageScript>().textPopUpEnceinte.GetComponent<RectTransform>().anchoredPosition = Vector2.zero;
+                GameObject.Find("Main Camera").GetComponent<LangageScript>().textPopUpEnceinte.GetComponent<RectTransform>().anchoredPosition = new Vector2(0, -42);
                 GameObject.Find("Main Camera").GetComponent<LangageScript>().textPopUpEnceinte.text = GameObject.Find("Main Camera").GetComponent<LangageScript>()._TextePopUpEnceinte;
             }
             while (playingAudioSource.isPlaying)
@@ -313,7 +313,7 @@ public class Fonctions_Utiles : MonoBehaviour {
                 GameObject.Find("Main Camera").GetComponent<LivreManagement>().panelPopUpEnceinte.transform.Find("PanelDontAsk").gameObject.SetActive(true);
                 GameObject.Find("Main Camera").transform.GetComponent<LangageScript>().textPopUpEnceinte.transform.SetAsFirstSibling();
                 GameObject.Find("Main Camera").GetComponent<LangageScript>().textPopUpEnceinte.text = GameObject.Find("Main Camera").GetComponent<LangageScript>()._TextePopUpEnceinte;
-                GameObject.Find("Main Camera").GetComponent<LangageScript>().textPopUpEnceinte.GetComponent<RectTransform>().anchoredPosition = Vector2.zero;
+                GameObject.Find("Main Camera").GetComponent<LangageScript>().textPopUpEnceinte.GetComponent<RectTransform>().anchoredPosition = new Vector2(0, -42);
             }
             while (playingAudioSource.isPlaying)
             {
@@ -375,7 +375,7 @@ public class Fonctions_Utiles : MonoBehaviour {
                 GameObject.Find("Main Camera").GetComponent<LivreManagement>().panelPopUpEnceinte.transform.Find("PanelDontAsk").gameObject.SetActive(true);
                 GameObject.Find("Main Camera").transform.GetComponent<LangageScript>().textPopUpEnceinte.transform.SetAsFirstSibling();
                 GameObject.Find("Main Camera").GetComponent<LangageScript>().textPopUpEnceinte.text = GameObject.Find("Main Camera").GetComponent<LangageScript>()._TextePopUpEnceinte;
-                GameObject.Find("Main Camera").GetComponent<LangageScript>().textPopUpEnceinte.GetComponent<RectTransform>().anchoredPosition = Vector2.zero;
+                GameObject.Find("Main Camera").GetComponent<LangageScript>().textPopUpEnceinte.GetComponent<RectTransform>().anchoredPosition = new Vector2(0, -42);
             }
             while (playingAudioSource.isPlaying)
             {
@@ -449,7 +449,7 @@ public class Fonctions_Utiles : MonoBehaviour {
                 GameObject.Find("Main Camera").GetComponent<LivreManagement>().panelPopUpEnceinte.transform.Find("PanelDontAsk").gameObject.SetActive(true);
                 GameObject.Find("Main Camera").transform.GetComponent<LangageScript>().textPopUpEnceinte.transform.SetAsFirstSibling();
                 GameObject.Find("Main Camera").GetComponent<LangageScript>().textPopUpEnceinte.text = GameObject.Find("Main Camera").GetComponent<LangageScript>()._TextePopUpEnceinte;
-                GameObject.Find("Main Camera").GetComponent<LangageScript>().textPopUpEnceinte.GetComponent<RectTransform>().anchoredPosition = Vector2.zero;
+                GameObject.Find("Main Camera").GetComponent<LangageScript>().textPopUpEnceinte.GetComponent<RectTransform>().anchoredPosition = new Vector2(0, -42);
             }
             while (playingAudioSource.isPlaying)
             {

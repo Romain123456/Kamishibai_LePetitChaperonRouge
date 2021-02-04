@@ -130,9 +130,9 @@ public class LangageScript : MonoBehaviour
         textesPagesLivres[6] = "...DABRA ! <color=red> (1) </color>";
         textesPagesLivres[7] = "Le petit renard disparaît, Petit Chaperon Rouge applaudit aussi <color=red> (1) </color>. Il ne reste pas le moindre poil orange.\n" +
             "– Au suivant ! Salut petit oiseau noir, quel tour de magie aimerais-tu que je fasse pour toi ?\n" +
-            "– Je souhaiterais..., je souhaiterais voyager sur la lune, plus haut que tous les autres oiseaux <color=red> (2) </color> !\n" +
+            "– Je souhaiterais..., je souhaiterais voyager sur la lune, plus haut que tous les autres oiseaux !\n" +
             "Le petit oiseau ferme les yeux, le Grand magicien lève sa baguette, dessine trois cercles et d’une voix forte déclame :\n" +
-            "– ABRACA... <color=red> (3) </color>";
+            "– ABRACA... <color=red> (2) </color>";
         textesPagesLivres[8] = "...DABRA ! <color=red> (1) </color>";
         textesPagesLivres[9] = "L’oiseau disparaît sous les yeux du Petit Chaperon Rouge fascinée, il ne reste pas une petite plume noire. Curieuse elle regarde le Grand magicien tout poilu, qu’elle n’avait jamais rencontré et il lui semblait normal, gentil. Elle le salue avec chaleur. Le grand débraillé à la queue touffue au sourire roublard lui demande :\n" +
             "– Salut petite fille toute rouge, toi aussi tu souhaites que je fasse un tour de magie ?\n" +

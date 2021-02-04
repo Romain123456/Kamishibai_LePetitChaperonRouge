@@ -213,9 +213,6 @@ public class LivreManagement : MonoBehaviour
         if (nbPagesLivre > 0)
         {
             //Attribution Méthode Button Panel Pause
-            //buttonSonPlus.onClick.AddListener(delegate { PanelPauseMonteSon(); });
-            //buttonSonMoins.onClick.AddListener(delegate { PanelPauseBaisseSon(); });
-            //buttonSonMute.onClick.AddListener(delegate { PanelPauseSonMute(); });
             buttonSonPause.onClick.AddListener(delegate { PanelPauseSonPause(); });
 
             pageLivreArray = new GameObject[nbPagesLivre];
@@ -224,10 +221,8 @@ public class LivreManagement : MonoBehaviour
                 pageLivreArray[ii] = (GameObject)Instantiate(pageLivrePrefab, panelLivre.transform);
                 pageLivreArray[ii].GetComponent<ScalePositionUI>().ReSizeScaleUI();
                 pageLivreArray[ii].GetComponent<PageLivreScript>().isPanelSonIndep = livre.isPanelSonIndep[ii];
-                //pageLivreArray[ii].transform.Find("TextPage").GetComponent<Text>().text = this.GetComponent<LangageScript>().textesPagesLivres[ii];
 
                 //Affectation de la fonctionalité pause au texte
-                //pageLivreArray[ii].transform.Find("TextPage").GetComponent<Button>().onClick.AddListener(delegate { PanelPauseSonPause(); });
                 pageLivreArray[ii].transform.Find("TextPage").GetComponent<Button>().onClick.AddListener(delegate { CachePanelPause();});
 
             //Ambiance musique 
@@ -251,9 +246,14 @@ public class LivreManagement : MonoBehaviour
                                 if(pageLivreArray[ii].GetComponent<PageLivreScript>().nbSonsIndep == 1)
                                 {
                                     pageLivreArray[ii].GetComponent<PageLivreScript>().sonsIndep[jj].GetComponent<RectTransform>().anchoredPosition3D = new Vector3(0, -9.0f, 0);
-                                } else if(pageLivreArray[ii].GetComponent<PageLivreScript>().nbSonsIndep > 1)
+                                }
+                                else if (pageLivreArray[ii].GetComponent<PageLivreScript>().nbSonsIndep == 2)
                                 {
-                                    pageLivreArray[ii].GetComponent<PageLivreScript>().sonsIndep[jj].GetComponent<RectTransform>().anchoredPosition3D = new Vector3(-75.0f + (jj * 70.0f), -9.0f, 0);
+                                    pageLivreArray[ii].GetComponent<PageLivreScript>().sonsIndep[jj].GetComponent<RectTransform>().anchoredPosition3D = new Vector3(-35.0f + (jj * 70.0f), -9.0f, 0);
+                                }
+                                else if(pageLivreArray[ii].GetComponent<PageLivreScript>().nbSonsIndep == 3)
+                                {
+                                    pageLivreArray[ii].GetComponent<PageLivreScript>().sonsIndep[jj].GetComponent<RectTransform>().anchoredPosition3D = new Vector3(-65.0f + (jj * 70.0f), -9.0f, 0);
                                 }
                                 pageLivreArray[ii].GetComponent<PageLivreScript>().sonsIndep[jj].GetComponent<BoutonSonIndepScript>().sonIndepClip = listeSonsLivre[(int)livre.codesSonIndep[compteurCodeSonIndep].z];
                                 pageLivreArray[ii].GetComponent<PageLivreScript>().sonsIndep[jj].GetComponent<BoutonSonIndepScript>().volumeClip = volumesSonsIndep[(int)livre.codesSonIndep[compteurCodeSonIndep].z];
